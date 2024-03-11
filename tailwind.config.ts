@@ -7,16 +7,10 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    container: {
-      padding: {
-        DEFAULT: "1rem",
-        sm: "2rem",
-        lg: "4rem",
-        xl: "5rem",
-        "2xl": "6rem",
-      },
-    },
     extend: {
+      animation: {
+        "spin-slow": "spin 8s linear infinite",
+      },
       fontFamily: {
         lato: ["var(--font-lato)"],
         kufam: ["var(--font-kufam)"],

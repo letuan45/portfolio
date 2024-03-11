@@ -14,4 +14,31 @@
       0 0 10px #f5de19,
       0 0 98px #fd3a69;
   }
+
+  .glowing-text-red {
+    @apply text-cus-red;
+    text-shadow:
+      0 0 5px #fd3a69,
+      0 0 15px #fd3a69,
+      0 0 20px #fd3a69,
+      0 0 10px #fd3a69;
+  }
+
+  .gradient-button {
+    position: relative;
+  }
+
+  .gradient-button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    padding: 3px;
+    background: linear-gradient(45deg, #9d0191, #fd3a69);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
 }

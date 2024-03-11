@@ -32,7 +32,7 @@ const navItems = [
 
 const NavBar = () => {
   return (
-    <div className="container flex items-center justify-between py-4 font-lato">
+    <div className="container mx-auto flex items-center justify-between py-4 font-lato lg:px-14">
       <Link href="/" className="flex gap-2">
         <CodeIcon width={44} height={20} />
         <span className="text-lg font-semibold text-white">Code by letuan</span>

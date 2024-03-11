@@ -1,3 +1,9 @@
+import Greeting from "@/components/greeting/Greeting";
+
 export default function Home() {
-  return <div className="text-cus-red font-kufam"></div>;
+  return (
+    <main>
+      <Greeting />
+    </main>
+  );
 }

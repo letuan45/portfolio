@@ -121,7 +121,7 @@ const TechLogos = [
 const Greeting = () => {
   const blobRadius = "47% 53% 53% 47% / 65% 46% 54% 35%";
   return (
-    <div className="container mx-auto grid w-full grid-cols-2 gap-4 py-8 max-lg:grid-cols-1">
+    <div className="container mx-auto mt-3 grid w-full grid-cols-2 gap-4 py-8 max-lg:grid-cols-1 lg:h-[90vh]">
       <div className="relative col-span-1">
         <Image
           src={plusLightImage}
@@ -135,21 +135,21 @@ const Greeting = () => {
           alt="triangle-light"
           width={80}
           height={80}
-          className="absolute bottom-2 left-28 rotate-45"
+          className="absolute left-28 top-80 rotate-45"
         />
         <Image
           src={squareLightImage}
           alt="square-light"
           width={60}
           height={60}
-          className="absolute bottom-1 right-48 rotate-12"
+          className="absolute right-48 top-[400px] rotate-12"
         />
         <Image
           src={turnLightImage}
           alt="turn-light"
           width={100}
           height={100}
-          className="absolute bottom-32 right-32 rotate-12"
+          className="absolute right-32 top-56 rotate-12"
         />
         <div className="relative my-20 flex justify-center">
           <div
@@ -174,7 +174,7 @@ const Greeting = () => {
               }}
               viewBox="0 0 100 100"
               xmlns="http://www.w3.org/2000/svg"
-              className="animate-spin-slow absolute -right-8 -top-8 -z-10 h-[200px] w-[200px] duration-500"
+              className="absolute -right-8 -top-8 -z-10 h-[200px] w-[200px] animate-spin-slow duration-500"
             >
               <defs>
                 <linearGradient
@@ -210,7 +210,7 @@ const Greeting = () => {
               }}
               viewBox="0 0 100 100"
               xmlns="http://www.w3.org/2000/svg"
-              className="animate-spin-slow filter- absolute -bottom-8 -left-8 -z-10 h-[200px] w-[200px] duration-500"
+              className="filter- absolute -bottom-8 -left-8 -z-10 h-[200px] w-[200px] animate-spin-slow duration-500"
             >
               <defs>
                 <linearGradient

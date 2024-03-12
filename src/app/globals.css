@@ -30,6 +30,11 @@
   font-size: 1rem !important;
 }
 
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .fade-in {
   animation: fadeIn 0.3s;
 }

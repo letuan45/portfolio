@@ -18,10 +18,150 @@ import Link from "next/link";
 import GradientButton from "../shared/ui/buttons/GradientButton";
 import GradientBlueStrokeButton from "../shared/ui/buttons/GradientBlueStrokeButton";
 import GithubIcon from "../shared/ui/logos/GithubIcon";
+import MaterialUILogo from "../shared/ui/logos/MaterialUILogo";
+import BootstrapLogo from "../shared/ui/logos/BootstrapLogo";
+import FirebaseLogo from "../shared/ui/logos/FirebaseLogo";
+import NodeLogo from "../shared/ui/logos/NodeLogo";
+import devFlowImage from "@/public/assets/images/dev-flow.png";
+import NextLogo from "../shared/ui/logos/NextLogo";
+import TailwindLogo from "../shared/ui/logos/TailwindLogo";
+import MongoLogo from "../shared/ui/logos/MongoLogo";
+import PytorchLogo from "../shared/ui/logos/PytorchLogo";
+import trafficClassifi from "@/public/assets/images/traffic-classification.png";
+import orderCoordinator from "@/public/assets/images/order-coodinate.png";
+import SpringBootLogo from "../shared/ui/logos/SpringBootLogo";
+import SqlLogo from "../shared/ui/logos/SqlLogo";
+import foodShopMobile from "@/public/assets/images/food-app.png";
+import bookStore from "@/public/assets/images/bookstore.png";
 
 const sliderData = [
   {
     id: 1,
+    title: "Devflow",
+    description:
+      "A clone version of Stackoverflow, people can auth with clerk, ask questions, answer a question, voting and explore the community",
+    image: devFlowImage,
+    techs: [
+      {
+        id: 1,
+        element: <NextLogo />,
+        isNextJS: true,
+      },
+      {
+        id: 2,
+        element: <TailwindLogo />,
+        isTailwind: true,
+      },
+      {
+        id: 3,
+        element: <MongoLogo />,
+      },
+    ],
+    demoLink: {
+      title: "Website deployment ",
+      link: "https://dev-flow-jet.vercel.app/",
+    },
+    gitLink: "https://github.com/letuan45/DevFlow",
+  },
+  {
+    id: 2,
+    title: "Internet traffic classification",
+    description:
+      "Machine learning graduation project that can classifi network flow into many classes, and make prediction",
+    image: trafficClassifi,
+    techs: [
+      {
+        id: 1,
+        element: <PytorchLogo />,
+        isNextJS: true,
+      },
+    ],
+    demoLink: {
+      title: "",
+      link: "",
+    },
+    gitLink: "https://github.com/letuan45/Traffic-Classification",
+  },
+  {
+    id: 3,
+    title: "Order coodinator",
+    description:
+      "Webapp that receive orders and coodinate to order delivery partners base on minimal price",
+    image: orderCoordinator,
+    techs: [
+      {
+        id: 1,
+        element: <ReactLogo />,
+      },
+      {
+        id: 2,
+        element: <TailwindLogo />,
+      },
+      {
+        id: 3,
+        element: <SpringBootLogo />,
+      },
+      {
+        id: 4,
+        element: <SqlLogo />,
+      },
+    ],
+    demoLink: {
+      title: "Demo on youtube",
+      link: "https://www.youtube.com/watch?v=Wr01dM6uZ34",
+    },
+    gitLink: "https://github.com/letuan45/Order-Coordinator-FE",
+  },
+  {
+    id: 4,
+    title: "Online Food shop",
+    description:
+      "A food shop ecommerce website with some fancy animation where user can order foods, review and rating...",
+    image: foodShopImage,
+    techs: [
+      {
+        id: 1,
+        element: <ReactLogo />,
+      },
+      {
+        id: 2,
+        element: <BootstrapLogo />,
+      },
+      {
+        id: 3,
+        element: <NodeLogo />,
+      },
+    ],
+    demoLink: {
+      title: "Demo on youtube",
+      link: "https://www.youtube.com/watch?v=elJcfNyhefI",
+    },
+    gitLink: "https://github.com/letuan45/Food-web",
+  },
+  {
+    id: 5,
+    title: "Online Food shop (mobile app)",
+    description:
+      "Full complete mobile app version of Online Food shop (website), code by ReactNative",
+    image: foodShopMobile,
+    techs: [
+      {
+        id: 1,
+        element: <ReactLogo />,
+      },
+      {
+        id: 3,
+        element: <NodeLogo />,
+      },
+    ],
+    demoLink: {
+      title: "",
+      link: "",
+    },
+    gitLink: "https://github.com/letuan45/FoodMobileApp",
+  },
+  {
+    id: 6,
     title: "Online Coffee shop",
     description:
       "A coffee shop ecommerce website that alows users can buying products online and order tables",
@@ -33,44 +173,44 @@ const sliderData = [
       },
       {
         id: 2,
-        element: <ReactLogo />,
+        element: <MaterialUILogo />,
       },
       {
         id: 3,
-        element: <ReactLogo />,
+        element: <BootstrapLogo />,
       },
       {
         id: 4,
-        element: <ReactLogo />,
-      },
-      {
-        id: 5,
-        element: <ReactLogo />,
+        element: <FirebaseLogo />,
       },
     ],
     demoLink: {
-      title: "Demo on Youtube",
-      link: "/",
+      title: "Website deployment ",
+      link: "https://coffee-shop-818d1.web.app",
     },
-    gitLink: "/",
+    gitLink: "https://github.com/letuan45/React-CoffeeShop",
   },
   {
-    id: 2,
-    title: "Online Food shop",
+    id: 7,
+    title: "Bookstore management",
     description:
-      "A coffee shop ecommerce website that alows users can buying products online and order tables",
-    image: foodShopImage,
+      "A web application can be used like a tool to manage full works of a bookstore, code by Spring MVC",
+    image: bookStore,
     techs: [
       {
         id: 1,
-        element: <ReactLogo />,
+        element: <SpringBootLogo />,
+      },
+      {
+        id: 2,
+        element: <BootstrapLogo />,
       },
     ],
     demoLink: {
-      title: "Deployment website",
-      link: "/",
+      title: "",
+      link: "",
     },
-    gitLink: "/",
+    gitLink: "https://github.com/letuan45/Phuong-Nam-book-store-clone",
   },
 ];
 
@@ -222,7 +362,7 @@ const Projects = () => {
               <p className="text-md my-4 font-kufam text-white">
                 {content.description}
               </p>
-              <h4 className="-mb-2 font-kufam text-lg font-semibold text-white">
+              <h4 className="mb-2 font-kufam text-lg font-semibold text-white">
                 Techs stack
               </h4>
               <div>
@@ -236,7 +376,12 @@ const Projects = () => {
                 >
                   {content.techs.map((tech) => {
                     return (
-                      <SwiperSlide key={tech.id}>{tech.element}</SwiperSlide>
+                      <SwiperSlide
+                        className={`${tech.isNextJS ? "!mr-[40px]" : ""} ${tech.isTailwind ? "!mr-[10px]" : ""}`}
+                        key={tech.id}
+                      >
+                        {tech.element}
+                      </SwiperSlide>
                     );
                   })}
                 </Swiper>
@@ -245,11 +390,13 @@ const Projects = () => {
                 Demo
               </h4>
               <div className="flex items-center justify-between">
-                <Link href={content.demoLink.link}>
-                  <GradientButton className="px-4 py-2 font-lato font-semibold">
-                    {content.demoLink.title}
-                  </GradientButton>
-                </Link>
+                {content.demoLink.title !== "" && (
+                  <Link href={content.demoLink.link}>
+                    <GradientButton className="px-4 py-2 font-lato font-semibold">
+                      {content.demoLink.title}
+                    </GradientButton>
+                  </Link>
+                )}
                 <Link href={content.gitLink}>
                   <GradientBlueStrokeButton rightIcon={<GithubIcon />}>
                     Github

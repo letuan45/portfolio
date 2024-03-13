@@ -122,4 +122,8 @@
     -webkit-mask-composite: xor;
     mask-composite: exclude;
   }
+
+  .glow-input {
+    box-shadow: 0 0 10px #836fff;
+  }
 }

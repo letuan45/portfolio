@@ -3,6 +3,7 @@ import { Kufam, Lato } from "next/font/google";
 import "./globals.css";
 import MainBackground from "@/public/assets/images/main-background.jpg";
 import NavBar from "@/components/shared/navbar/NavBar";
+import Footer from "@/components/shared/footer/Footer";
 
 const lato = Lato({
   weight: ["300", "400", "700", "900"],
@@ -35,6 +36,7 @@ export default function RootLayout({
       >
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );

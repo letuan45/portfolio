@@ -273,7 +273,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="py-4">
+    <section className="py-2">
       <h2 className="my-8 block text-center font-kufam text-4xl font-semibold text-white">
         My personal projects
       </h2>
@@ -391,13 +391,13 @@ const Projects = () => {
               </h4>
               <div className="flex items-center justify-between">
                 {content.demoLink.title !== "" && (
-                  <Link href={content.demoLink.link}>
+                  <Link href={content.demoLink.link} target="_blank">
                     <GradientButton className="px-4 py-2 font-lato font-semibold">
                       {content.demoLink.title}
                     </GradientButton>
                   </Link>
                 )}
-                <Link href={content.gitLink}>
+                <Link href={content.gitLink} target="_blank">
                   <GradientBlueStrokeButton rightIcon={<GithubIcon />}>
                     Github
                   </GradientBlueStrokeButton>

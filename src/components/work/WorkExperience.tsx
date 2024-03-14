@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const WorkExperience = () => {
   return (
-    <section className="container mx-auto mt-8  py-10 lg:px-24">
+    <section id="works" className="container mx-auto mt-8  py-10 lg:px-24">
       <h2 className="mb-4 py-4 font-kufam text-4xl font-semibold text-white max-lg:text-center">
         Working experience
       </h2>

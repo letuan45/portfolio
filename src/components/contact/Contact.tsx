@@ -3,7 +3,10 @@ import GradientStrokeButton from "../shared/ui/buttons/GradientStrokeButton";
 
 const Contact = () => {
   return (
-    <section className="container mx-auto mb-8 w-full py-4 lg:px-24">
+    <section
+      id="contact"
+      className="container mx-auto mb-8 w-full py-4 lg:px-24"
+    >
       <div className="flex flex-col items-center justify-center">
         <h2 className="my-5 font-kufam text-4xl font-semibold text-white">
           Contact me

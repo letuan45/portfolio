@@ -4,6 +4,7 @@ import "./globals.css";
 import MainBackground from "@/public/assets/images/main-background.jpg";
 import NavBar from "@/components/shared/navbar/NavBar";
 import Footer from "@/components/shared/footer/Footer";
+import HiddenNavbar from "@/components/shared/navbar/HiddenNavbar";
 
 const lato = Lato({
   weight: ["300", "400", "700", "900"],
@@ -35,6 +36,7 @@ export default function RootLayout({
         className="bg-cover bg-no-repeat"
       >
         <NavBar />
+        <HiddenNavbar />
         {children}
         <Footer />
       </body>

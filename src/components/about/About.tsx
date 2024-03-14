@@ -67,7 +67,10 @@ const languages = [
 
 const About = () => {
   return (
-    <section className="container mx-auto my-7 grid grid-cols-2 gap-4 max-lg:grid-cols-1 max-sm:px-2 lg:px-24">
+    <section
+      id="about"
+      className="container mx-auto my-7 grid grid-cols-2 gap-4 max-lg:grid-cols-1 max-sm:px-2 lg:px-24"
+    >
       <div className="col-span-1 max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center">
         <h2 className="font-kufam text-4xl font-semibold text-white max-lg:text-center">
           About me

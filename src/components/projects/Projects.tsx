@@ -273,7 +273,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="py-2">
+    <section id="projects" className="py-2">
       <h2 className="my-8 block text-center font-kufam text-4xl font-semibold text-white">
         My personal projects
       </h2>
@@ -313,7 +313,7 @@ const Projects = () => {
                   techs: currentItemData?.techs || [],
                 });
               }}
-              onSwiper={(swiper) => console.log(swiper)}
+              onSwiper={() => {}}
             >
               {sliderData.map((item) => {
                 return (

@@ -52,7 +52,10 @@ const TechLogos = [
 const Greeting = () => {
   const blobRadius = "47% 53% 53% 47% / 65% 46% 54% 35%";
   return (
-    <section className="container mx-auto mt-3 grid w-full grid-cols-1 gap-4 py-8 lg:h-[90vh] lg:grid-cols-2">
+    <section
+      id="greeting"
+      className="container mx-auto mt-3 grid w-full grid-cols-1 gap-4 py-8 lg:h-[90vh] lg:grid-cols-2"
+    >
       <div className="relative col-span-1">
         <Image
           src={plusLightImage}
@@ -210,7 +213,7 @@ const Greeting = () => {
             like my introduction or get interesting with my profile, please
             contact me. Wish you have a wonderful day.
           </p>
-          <ul className="mb-6 mt-3 flex flex-wrap items-center justify-center gap-4 max-md:px-4">
+          <ul className="max:md-justify-center mb-6 mt-3 flex flex-wrap items-center gap-4 max-md:px-4">
             {TechLogos.map((tech) => (
               <li key={tech.id}>{tech.element}</li>
             ))}

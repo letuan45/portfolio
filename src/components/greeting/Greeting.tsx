@@ -52,35 +52,35 @@ const TechLogos = [
 const Greeting = () => {
   const blobRadius = "47% 53% 53% 47% / 65% 46% 54% 35%";
   return (
-    <section className="container mx-auto mt-3 grid w-full grid-cols-2 gap-4 py-8 max-lg:grid-cols-1 lg:h-[90vh]">
+    <section className="container mx-auto mt-3 grid w-full grid-cols-1 gap-4 py-8 lg:h-[90vh] lg:grid-cols-2">
       <div className="relative col-span-1">
         <Image
           src={plusLightImage}
           alt="plus-light"
           width={50}
           height={50}
-          className="absolute left-36 top-10"
+          className="absolute left-36 top-10 z-10"
         />
         <Image
           src={triangleLightImage}
           alt="triangle-light"
           width={80}
           height={80}
-          className="absolute left-28 top-80 rotate-45"
+          className="absolute left-28 top-80 z-10 rotate-45"
         />
         <Image
           src={squareLightImage}
           alt="square-light"
           width={60}
           height={60}
-          className="absolute right-48 top-[400px] rotate-12"
+          className="absolute right-48 top-[400px] z-10 rotate-12"
         />
         <Image
           src={turnLightImage}
           alt="turn-light"
           width={100}
           height={100}
-          className="absolute right-32 top-56 rotate-12"
+          className="absolute right-32 top-56 z-10 rotate-12"
         />
         <div className="relative my-20 flex justify-center">
           <div
@@ -175,42 +175,42 @@ const Greeting = () => {
         </div>
       </div>
       <div className="col-span-1">
-        <div className="relative flex flex-col justify-center md:mt-10">
+        <div className="relative flex flex-col justify-center max-lg:items-center md:mt-10">
           <Image
             src={circleLightImage}
             alt="circle-light"
             width={60}
             height={60}
-            className="absolute -top-1 right-52"
+            className="absolute -top-16 right-44 max-xl:hidden"
           />
           <Image
             src={squareLightImage}
             alt="square-light-2"
             width={60}
             height={60}
-            className="absolute -bottom-7 right-64"
+            className="absolute -bottom-7 right-44 max-xl:hidden"
           />
           <h2
-            className="font-kufam text-6xl font-semibold text-white"
+            className="font-kufam text-6xl font-semibold text-white max-lg:text-center max-sm:text-5xl"
             style={{ textShadow: "0 0 0.15em white" }}
           >
             Hi there!
           </h2>
-          <h1 className="my-5 font-kufam text-4xl text-white">
+          <h1 className="my-5 font-kufam text-4xl text-white max-lg:text-center max-sm:text-2xl">
             My name is{" "}
             <span
-              className="font-semibold text-cus-purple-100"
+              className="font-semibold text-cus-purple-100 max-lg:text-center "
               style={{ textShadow: "0 0 0.08em #BC6FF1" }}
             >
               Le Lam Tuan
             </span>
           </h1>
-          <p className="mt-2 w-4/5 font-kufam text-lg text-white">
+          <p className="mt-2 w-4/5 font-kufam text-lg text-white max-lg:text-center max-sm:text-sm">
             Welcome to my Portfolio, this is a Portfolio code by NextJS if you
             like my introduction or get interesting with my profile, please
             contact me. Wish you have a wonderful day.
           </p>
-          <ul className="mb-6 mt-3 flex items-center gap-4">
+          <ul className="mb-6 mt-3 flex flex-wrap items-center justify-center gap-4 max-md:px-4">
             {TechLogos.map((tech) => (
               <li key={tech.id}>{tech.element}</li>
             ))}

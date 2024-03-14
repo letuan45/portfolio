@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="en" className={`${lato.variable} ${kufam.variable}`}>
       <body
         style={{ backgroundImage: `url(${MainBackground.src})` }}
-        className="h-screen bg-cover bg-no-repeat"
+        className="bg-cover bg-no-repeat"
       >
         <NavBar />
         {children}

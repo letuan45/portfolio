@@ -32,12 +32,12 @@ const navItems = [
 
 const NavBar = () => {
   return (
-    <div className="container mx-auto flex items-center justify-between py-4 font-lato lg:mt-2 lg:px-14">
+    <div className="container mx-auto flex items-center justify-between py-4 font-lato max-md:px-4 lg:mt-2 lg:px-14">
       <Link href="/" className="flex gap-2">
         <CodeIcon width={44} height={20} />
         <span className="text-lg font-semibold text-white">Code by letuan</span>
       </Link>
-      <nav>
+      <nav className="max-lg:hidden">
         <ul className="flex items-center justify-center gap-4">
           {navItems.map((navItem) => {
             return (

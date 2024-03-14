@@ -67,25 +67,25 @@ const languages = [
 
 const About = () => {
   return (
-    <section className="container mx-auto my-7 grid grid-cols-2 gap-4 lg:px-24">
-      <div className="col-span-1">
-        <h2 className="font-kufam text-4xl font-semibold text-white">
+    <section className="container mx-auto my-7 grid grid-cols-2 gap-4 max-lg:grid-cols-1 max-sm:px-2 lg:px-24">
+      <div className="col-span-1 max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center">
+        <h2 className="font-kufam text-4xl font-semibold text-white max-lg:text-center">
           About me
         </h2>
-        <p className="my-4 block font-kufam text-lg text-white">
+        <p className="my-4 block font-kufam text-lg text-white max-xl:text-sm max-lg:text-center max-lg:text-lg">
           I have graduate a degree as a Software Engineer, my main skill is web
           development. I am also eager to find opportunities to enhance my
           personal skills, to be enthusiastic about contributing to a
           company&apos;s success and growth.
         </p>
-        <h2 className="font-kufam text-2xl font-semibold text-white">
+        <h2 className="font-kufam text-2xl font-semibold text-white max-lg:text-center">
           My main program languages
         </h2>
-        <ul className="my-4 grid w-1/3 grid-flow-col grid-cols-4">
+        <ul className="my-4 flex">
           {languages.map((item) => (
             <li
               key={item.id}
-              className="col-span-1 flex h-14 w-12 items-center justify-center rounded-sm border-2 border-cus-gray-200 bg-black/30 backdrop-blur-sm duration-200 hover:border-primary"
+              className="col-span-1 mx-4 flex h-14 w-12 items-center justify-center rounded-sm border-2 border-cus-gray-200 bg-black/30 backdrop-blur-sm duration-200 hover:border-primary"
             >
               {item.image}
             </li>
@@ -106,19 +106,21 @@ const About = () => {
             2019 - 2024
           </p>
         </div>
-        <p className="mt-3 font-kufam font-semibold text-white">
+        <p className="mt-3 font-kufam font-semibold text-white max-lg:text-center">
           Posts & Telecommunications Institute of Technology <br /> (PTIT) Ho
           Chi Minh City Campus
         </p>
       </div>
-      <div className="col-span-1">
-        <Image
-          src={ComputerImage}
-          width={548}
-          height={548}
-          alt="computer-1"
-          className="-scale-x-100 lg:ml-10"
-        />
+      <div className="col-span-1 max-xl:flex max-xl:items-center max-lg:justify-center">
+        <div className="max-lg:flex max-lg:justify-center">
+          <Image
+            src={ComputerImage}
+            width={548}
+            height={548}
+            alt="computer-1"
+            className="-scale-x-100 max-lg:w-2/3 xl:ml-10"
+          />
+        </div>
       </div>
     </section>
   );

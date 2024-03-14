@@ -6,7 +6,7 @@ import WorkExperience from "@/components/work/WorkExperience";
 
 export default function Home() {
   return (
-    <main>
+    <main className="w-full overflow-hidden">
       <Greeting />
       <About />
       <Projects />

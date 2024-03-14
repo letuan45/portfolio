@@ -277,15 +277,15 @@ const Projects = () => {
       <h2 className="my-8 block text-center font-kufam text-4xl font-semibold text-white">
         My personal projects
       </h2>
-      <div className="container relative h-fit w-full bg-cover bg-center bg-no-repeat">
+      <div className="relative w-full bg-cover bg-center bg-no-repeat max-lg:px-10 max-sm:px-4 lg:h-fit">
         <div
           ref={backgroundRef}
           style={{ backgroundImage: `url(${currentBgImage.src})` }}
           className="absolute left-0 top-0 h-full w-full bg-cover bg-center bg-no-repeat"
         />
         <div className="absolute left-0 top-0 isolate h-full w-full bg-blue-purple/30 bg-opacity-40 backdrop-blur-sm"></div>
-        <div className="mx-auto grid grid-cols-9 gap-10 py-16 lg:px-36">
-          <div className="relative col-span-6">
+        <div className="mx-auto grid grid-cols-9 gap-10 py-16 max-xl:grid-cols-1 max-xl:gap-0 lg:px-36">
+          <div className="relative col-span-6 max-xl:col-span-1 max-xl:mb-6">
             <Swiper
               onBeforeInit={(swiper) => {
                 sliderRef.current = swiper;
@@ -323,7 +323,7 @@ const Projects = () => {
                       width={0}
                       height={0}
                       style={{ width: "100%" }}
-                      className="h-[385px] rounded-2xl"
+                      className="h-[385px] rounded-2xl max-md:h-[20rem] max-sm:h-[15rem] max-[580px]:h-[14rem] max-[550px]:h-[12rem]"
                       alt="project img"
                     />
                   </SwiperSlide>
@@ -332,34 +332,34 @@ const Projects = () => {
             </Swiper>
             <button
               onClick={handleNext}
-              className={`absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-1/2 rounded-full  p-3 shadow-md ${nextIsDisabled ? "bg-slate-400/50" : "bg-cus-dark-100"}`}
+              className={`absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-1/2 rounded-full p-3 shadow-md max-sm:p-1 ${nextIsDisabled ? "bg-slate-400/50" : "bg-cus-dark-100"}`}
               disabled={nextIsDisabled}
             >
               <RightChevIcon
-                className="h-8 w-8"
+                className="h-8 w-8 max-sm:h-4 max-sm:w-4"
                 strokeColor={`${!nextIsDisabled ? "#00D8FF" : "#4C4C4C"}`}
               />
             </button>
             <button
               onClick={handlePrev}
-              className={`absolute left-0 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full  p-3 shadow-md ${prevIsDisabled ? "bg-slate-400/50" : "bg-cus-dark-100"}`}
+              className={`absolute left-0 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full p-3 shadow-md max-sm:p-1 ${prevIsDisabled ? "bg-slate-400/50" : "bg-cus-dark-100"}`}
               disabled={prevIsDisabled}
             >
               <LeftChevIcon
-                className="h-8 w-8"
+                className="h-8 w-8 max-sm:h-4 max-sm:w-4"
                 strokeColor={`${!prevIsDisabled ? "#00D8FF" : "#4C4C4C"}`}
               />
             </button>
           </div>
-          <div className="z-10 col-span-3">
+          <div className="z-10 col-span-3 max-lg:col-span-1">
             <div className="flex h-full flex-col justify-center rounded-md bg-cus-dark-100/90 px-8 py-6 lg:ml-1">
               <h3
-                className="font-kufam text-2xl font-semibold text-cus-blue-100"
+                className="font-kufam text-2xl font-semibold text-cus-blue-100 max-sm:text-xl"
                 style={{ textShadow: "0 0 0.15em #00D8FF" }}
               >
                 {content.title}
               </h3>
-              <p className="text-md my-4 font-kufam text-white">
+              <p className="text-md my-4 font-kufam text-white max-sm:text-sm">
                 {content.description}
               </p>
               <h4 className="mb-2 font-kufam text-lg font-semibold text-white">
@@ -389,10 +389,10 @@ const Projects = () => {
               <h4 className="mb-2 mt-3 font-kufam text-lg font-semibold text-white">
                 Demo
               </h4>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between max-xl:justify-start">
                 {content.demoLink.title !== "" && (
                   <Link href={content.demoLink.link} target="_blank">
-                    <GradientButton className="px-4 py-2 font-lato font-semibold">
+                    <GradientButton className="px-4 py-2 font-lato font-semibold max-xl:mr-4">
                       {content.demoLink.title}
                     </GradientButton>
                   </Link>

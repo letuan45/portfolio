@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
@@ -6,6 +8,8 @@ import PythonImage from "@/public/assets/icons/python-logo.png";
 import JavaImage from "@/public/assets/icons/java-logo.png";
 import ComputerImage from "@/public/assets/images/computer-1.png";
 import ptitLogo from "@/public/assets/icons/ptit-logo.png";
+
+import { motion } from "framer-motion";
 
 const languages = [
   {
@@ -72,19 +76,39 @@ const About = () => {
       className="container mx-auto my-7 grid grid-cols-2 gap-4 max-lg:grid-cols-1 max-sm:px-2 lg:px-24"
     >
       <div className="col-span-1 max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center">
-        <h2 className="font-kufam text-4xl font-semibold text-white max-lg:text-center">
+        <motion.h2
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.48 }}
+          className="font-kufam text-4xl font-semibold text-white max-lg:text-center"
+        >
           About me
-        </h2>
-        <p className="my-4 block font-kufam text-lg text-white max-xl:text-sm max-lg:text-center max-lg:text-lg">
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.55 }}
+          className="my-4 block font-kufam text-lg text-white max-xl:text-sm max-lg:text-center max-lg:text-lg"
+        >
           I have graduate a degree as a Software Engineer, my main skill is web
           development. I am also eager to find opportunities to enhance my
           personal skills, to be enthusiastic about contributing to a
           company&apos;s success and growth.
-        </p>
-        <h2 className="font-kufam text-2xl font-semibold text-white max-lg:text-center">
+        </motion.p>
+        <motion.h2
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.65 }}
+          className="font-kufam text-2xl font-semibold text-white max-lg:text-center"
+        >
           My main program languages
-        </h2>
-        <ul className="my-4 flex">
+        </motion.h2>
+        <motion.ul
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.72 }}
+          className="my-4 flex"
+        >
           {languages.map((item) => (
             <li
               key={item.id}
@@ -93,11 +117,21 @@ const About = () => {
               {item.image}
             </li>
           ))}
-        </ul>
-        <h2 className="font-kufam text-2xl font-semibold text-white">
+        </motion.ul>
+        <motion.h2
+          initial={{ opacity: 0, x: -70 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="font-kufam text-2xl font-semibold text-white"
+        >
           Education
-        </h2>
-        <div className="ml-8 flex items-center">
+        </motion.h2>
+        <motion.div
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.88 }}
+          className="ml-8 flex items-center"
+        >
           <Image
             src={ptitLogo}
             width={60}
@@ -108,13 +142,23 @@ const About = () => {
           <p className="ml-3 font-kufam font-semibold text-white">
             2019 - 2024
           </p>
-        </div>
-        <p className="mt-3 font-kufam font-semibold text-white max-lg:text-center">
+        </motion.div>
+        <motion.p
+          initial={{ opacity: 0, x: -90 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.95 }}
+          className="mt-3 font-kufam font-semibold text-white max-lg:text-center"
+        >
           Posts & Telecommunications Institute of Technology <br /> (PTIT) Ho
           Chi Minh City Campus
-        </p>
+        </motion.p>
       </div>
-      <div className="col-span-1 max-xl:flex max-xl:items-center max-lg:justify-center">
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.67 }}
+        className="col-span-1 max-xl:flex max-xl:items-center max-lg:justify-center"
+      >
         <div className="max-lg:flex max-lg:justify-center">
           <Image
             src={ComputerImage}
@@ -124,7 +168,7 @@ const About = () => {
             className="-scale-x-100 max-lg:w-2/3 xl:ml-10"
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

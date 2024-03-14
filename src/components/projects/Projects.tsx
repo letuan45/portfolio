@@ -33,6 +33,7 @@ import SpringBootLogo from "../shared/ui/logos/SpringBootLogo";
 import SqlLogo from "../shared/ui/logos/SqlLogo";
 import foodShopMobile from "@/public/assets/images/food-app.png";
 import bookStore from "@/public/assets/images/bookstore.png";
+import { motion } from "framer-motion";
 
 const sliderData = [
   {
@@ -274,18 +275,31 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-2">
-      <h2 className="my-8 block text-center font-kufam text-4xl font-semibold text-white">
+      <motion.h2
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.67 }}
+        className="my-8 block text-center font-kufam text-4xl font-semibold text-white"
+      >
         My personal projects
-      </h2>
+      </motion.h2>
       <div className="relative w-full bg-cover bg-center bg-no-repeat max-lg:px-10 max-sm:px-4 lg:h-fit">
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.7 }}
           ref={backgroundRef}
           style={{ backgroundImage: `url(${currentBgImage.src})` }}
           className="absolute left-0 top-0 h-full w-full bg-cover bg-center bg-no-repeat"
         />
         <div className="absolute left-0 top-0 isolate h-full w-full bg-blue-purple/30 bg-opacity-40 backdrop-blur-sm"></div>
         <div className="mx-auto grid grid-cols-9 gap-10 py-16 max-xl:grid-cols-1 max-xl:gap-0 lg:px-36">
-          <div className="relative col-span-6 max-xl:col-span-1 max-xl:mb-6">
+          <motion.div
+            initial={{ opacity: 0, x: -80, y: 40 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ duration: 0.75 }}
+            className="relative col-span-6 max-xl:col-span-1 max-xl:mb-6"
+          >
             <Swiper
               onBeforeInit={(swiper) => {
                 sliderRef.current = swiper;
@@ -350,9 +364,14 @@ const Projects = () => {
                 strokeColor={`${!prevIsDisabled ? "#00D8FF" : "#4C4C4C"}`}
               />
             </button>
-          </div>
+          </motion.div>
           <div className="z-10 col-span-3 max-lg:col-span-1">
-            <div className="flex h-full flex-col justify-center rounded-md bg-cus-dark-100/90 px-8 py-6 lg:ml-1">
+            <motion.div
+              initial={{ opacity: 0, x: 80, y: 40 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 0.75 }}
+              className="flex h-full flex-col justify-center rounded-md bg-cus-dark-100/90 px-8 py-6 lg:ml-1"
+            >
               <h3
                 className="font-kufam text-2xl font-semibold text-cus-blue-100 max-sm:text-xl"
                 style={{ textShadow: "0 0 0.15em #00D8FF" }}
@@ -403,7 +422,7 @@ const Projects = () => {
                   </GradientBlueStrokeButton>
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

@@ -1,5 +1,9 @@
+"use client";
+
 import React from "react";
 import GradientStrokeButton from "../shared/ui/buttons/GradientStrokeButton";
+
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
@@ -8,10 +12,20 @@ const Contact = () => {
       className="container mx-auto mb-8 w-full py-4 lg:px-24"
     >
       <div className="flex flex-col items-center justify-center">
-        <h2 className="my-5 font-kufam text-4xl font-semibold text-white">
+        <motion.h2
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.75 }}
+          className="my-5 font-kufam text-4xl font-semibold text-white"
+        >
           Contact me
-        </h2>
-        <form className="max-w-[800px] rounded-xl bg-cus-gray-100/25 px-8 py-6 backdrop-blur-sm max-sm:rounded-none max-sm:px-6">
+        </motion.h2>
+        <motion.form
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.82 }}
+          className="max-w-[800px] rounded-xl bg-cus-gray-100/25 px-8 py-6 backdrop-blur-sm max-sm:rounded-none max-sm:px-6"
+        >
           <div className="flex gap-4 max-sm:flex max-sm:flex-col">
             <div className="flex flex-col gap-4">
               <input
@@ -34,7 +48,7 @@ const Contact = () => {
             </p>
             <GradientStrokeButton>Submit contact</GradientStrokeButton>
           </div>
-        </form>
+        </motion.form>
       </div>
     </section>
   );

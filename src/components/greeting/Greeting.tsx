@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import myFaceImage from "@/public/assets/images/mat-toi.png";
 import plusLightImage from "@/public/assets/images/plus.png";
@@ -17,6 +19,7 @@ import NestLogo from "../shared/ui/logos/NestLogo";
 import SpringBootLogo from "../shared/ui/logos/SpringBootLogo";
 import SqlLogo from "../shared/ui/logos/SqlLogo";
 import MongoLogo from "../shared/ui/logos/MongoLogo";
+import { useAnimation, useInView, motion } from "framer-motion";
 
 const TechLogos = [
   {
@@ -51,49 +54,115 @@ const TechLogos = [
 
 const Greeting = () => {
   const blobRadius = "47% 53% 53% 47% / 65% 46% 54% 35%";
+
   return (
     <section
       id="greeting"
       className="container mx-auto mt-3 grid w-full grid-cols-1 gap-4 py-8 lg:h-[90vh] lg:grid-cols-2"
     >
       <div className="relative col-span-1">
-        <Image
-          src={plusLightImage}
-          alt="plus-light"
-          width={50}
-          height={50}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          animate={{
+            y: [-10, 10],
+            transition: {
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "reverse",
+            },
+          }}
           className="absolute left-36 top-10 z-10"
-        />
-        <Image
-          src={triangleLightImage}
-          alt="triangle-light"
-          width={80}
-          height={80}
-          className="absolute left-28 top-80 z-10 rotate-45"
-        />
-        <Image
-          src={squareLightImage}
-          alt="square-light"
-          width={60}
-          height={60}
-          className="absolute right-48 top-[400px] z-10 rotate-12"
-        />
-        <Image
-          src={turnLightImage}
-          alt="turn-light"
-          width={100}
-          height={100}
-          className="absolute right-32 top-56 z-10 rotate-12"
-        />
+          style={{ width: "50px", height: "50px" }}
+        >
+          <Image
+            src={plusLightImage}
+            alt="plus-light"
+            width={0}
+            height={0}
+            className="absolute left-0 top-0 h-full w-full"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0, rotate: 45 }}
+          transition={{ duration: 0.5 }}
+          animate={{
+            y: [-14, 14],
+            transition: {
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "reverse",
+            },
+          }}
+          style={{ width: "80px", height: "80px" }}
+          className="absolute left-28 top-80 z-10"
+        >
+          <Image
+            src={triangleLightImage}
+            alt="triangle-light"
+            width={0}
+            height={0}
+            className="absolute left-0 top-0 h-full w-full"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 70 }}
+          whileInView={{ opacity: 1, x: 0, rotate: 12 }}
+          transition={{ duration: 0.6 }}
+          animate={{
+            y: [-14, 24],
+            transition: {
+              duration: 3,
+              repeat: Infinity,
+              repeatType: "reverse",
+            },
+          }}
+          className="absolute right-48 top-[400px] z-10"
+          style={{ width: "60px", height: "60px" }}
+        >
+          <Image
+            src={squareLightImage}
+            alt="square-light"
+            width={0}
+            height={0}
+            className="absolute left-0 top-0 h-full w-full"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0, rotate: 12 }}
+          transition={{ duration: 0.5 }}
+          animate={{
+            y: [-8, 8],
+            transition: {
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "reverse",
+            },
+          }}
+          className="absolute right-32 top-56 z-10"
+          style={{ width: "100px", height: "100px" }}
+        >
+          <Image
+            src={turnLightImage}
+            alt="turn-light"
+            width={0}
+            height={0}
+            className="absolute left-0 top-0 h-full w-full"
+          />
+        </motion.div>
         <div className="relative my-20 flex justify-center">
-          <div
-            style={{ borderRadius: blobRadius }}
-            className="relative h-[300px] w-[300px] bg-gradient-to-r from-[#494949] to-[#644D7C] shadow-sm shadow-cus-gray-200"
-          >
+          <div className="relative h-[300px] w-[300px] ">
             <div
               style={{ borderRadius: blobRadius }}
               className="absolute h-full w-full overflow-hidden bg-transparent"
             >
+              <div
+                style={{ borderRadius: blobRadius }}
+                className="absolute h-full w-full bg-gradient-to-r from-[#494949] to-[#644D7C] shadow-sm shadow-cus-gray-200"
+              ></div>
               <Image
                 src={myFaceImage}
                 alt="my-face"
@@ -102,13 +171,16 @@ const Greeting = () => {
                 className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transform"
               />
             </div>
-            <svg
+            <motion.svg
+              initial={{ opacity: 0, y: -100 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 360 }}
+              transition={{ duration: 1, ease: "easeIn" }}
               style={{
                 filter: "drop-shadow(0 0 10px rgba(241, 102, 42, 0.8))",
               }}
               viewBox="0 0 100 100"
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute -right-8 -top-8 -z-10 h-[200px] w-[200px] animate-spin-slow duration-500"
+              className="absolute -right-8 -top-8 -z-10 h-[200px] w-[200px]"
             >
               <defs>
                 <linearGradient
@@ -137,11 +209,14 @@ const Greeting = () => {
                 "
                 ></animate>
               </path>
-            </svg>
-            <svg
+            </motion.svg>
+            <motion.svg
               style={{
                 filter: "drop-shadow(0 0 10px rgba(172, 158, 255, 0.8))",
               }}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 360 }}
+              transition={{ duration: 0.8 }}
               viewBox="0 0 100 100"
               xmlns="http://www.w3.org/2000/svg"
               className="filter- absolute -bottom-8 -left-8 -z-10 h-[200px] w-[200px] animate-spin-slow duration-500"
@@ -173,33 +248,73 @@ const Greeting = () => {
                 "
                 ></animate>
               </path>
-            </svg>
+            </motion.svg>
           </div>
         </div>
       </div>
       <div className="col-span-1">
         <div className="relative flex flex-col justify-center max-lg:items-center md:mt-10">
-          <Image
-            src={circleLightImage}
-            alt="circle-light"
-            width={60}
-            height={60}
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.68 }}
+            animate={{
+              y: [-8, 10],
+              transition: {
+                duration: 3.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              },
+            }}
             className="absolute -top-16 right-44 max-xl:hidden"
-          />
-          <Image
-            src={squareLightImage}
-            alt="square-light-2"
-            width={60}
-            height={60}
+            style={{ width: "60px", height: "60px" }}
+          >
+            <Image
+              src={circleLightImage}
+              alt="circle-light"
+              width={0}
+              height={0}
+              className="absolute left-0 top-0 h-full w-full"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0, rotate: 180 }}
+            transition={{ duration: 0.68 }}
+            animate={{
+              y: [-14, 16],
+              transition: {
+                duration: 2,
+                repeat: Infinity,
+                repeatType: "reverse",
+              },
+            }}
             className="absolute -bottom-7 right-44 max-xl:hidden"
-          />
-          <h2
+            style={{ width: "60px", height: "60px" }}
+          >
+            <Image
+              src={squareLightImage}
+              alt="square-light-2"
+              width={60}
+              height={60}
+              className="absolute left-0 top-0 h-full w-full"
+            />
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, x: 110 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, ease: "easeIn" }}
             className="font-kufam text-6xl font-semibold text-white max-lg:text-center max-sm:text-5xl"
             style={{ textShadow: "0 0 0.15em white" }}
           >
             Hi there!
-          </h2>
-          <h1 className="my-5 font-kufam text-4xl text-white max-lg:text-center max-sm:text-2xl">
+          </motion.h2>
+          <motion.h1
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, ease: "easeIn" }}
+            className="my-5 font-kufam text-4xl text-white max-lg:text-center max-sm:text-2xl"
+          >
             My name is{" "}
             <span
               className="font-semibold text-cus-purple-100 max-lg:text-center "
@@ -207,20 +322,36 @@ const Greeting = () => {
             >
               Le Lam Tuan
             </span>
-          </h1>
-          <p className="mt-2 w-4/5 font-kufam text-lg text-white max-lg:text-center max-sm:text-sm">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, x: 120 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.55, ease: "easeIn" }}
+            className="mt-2 w-4/5 font-kufam text-lg text-white max-lg:text-center max-sm:text-sm"
+          >
             Welcome to my Portfolio, this is a Portfolio code by NextJS if you
             like my introduction or get interesting with my profile, please
             contact me. Wish you have a wonderful day.
-          </p>
-          <ul className="max:md-justify-center mb-6 mt-3 flex flex-wrap items-center gap-4 max-md:px-4">
+          </motion.p>
+          <motion.ul
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.67, ease: "easeIn" }}
+            className="max:md-justify-center mb-6 mt-3 flex flex-wrap items-center gap-4 max-md:px-4"
+          >
             {TechLogos.map((tech) => (
               <li key={tech.id}>{tech.element}</li>
             ))}
-          </ul>
-          <Link href="/">
-            <GradientStrokeButton>Download my CV</GradientStrokeButton>
-          </Link>
+          </motion.ul>
+          <motion.div
+            initial={{ opacity: 0, y: 120 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, ease: "easeIn" }}
+          >
+            <Link href="/">
+              <GradientStrokeButton>Download my CV</GradientStrokeButton>
+            </Link>
+          </motion.div>
         </div>
       </div>
     </section>

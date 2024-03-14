@@ -1,50 +1,111 @@
+"use client";
+
 import React from "react";
 import oldComputerImage from "@/public/assets/images/old-computer.png";
 import crownImage from "@/public/assets/images/crown.png";
 import plusImage from "@/public/assets/images/plus.png";
 import Image from "next/image";
 
+import { motion } from "framer-motion";
+
 const WorkExperience = () => {
   return (
     <section id="works" className="container mx-auto mt-8  py-10 lg:px-24">
-      <h2 className="mb-4 py-4 font-kufam text-4xl font-semibold text-white max-lg:text-center">
+      <motion.h2
+        initial={{ opacity: 0, x: -80 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.58 }}
+        className="mb-4 py-4 font-kufam text-4xl font-semibold text-white max-lg:text-center"
+      >
         Working experience
-      </h2>
+      </motion.h2>
       <div className="grid grid-cols-2 gap-4 max-lg:grid-cols-1">
         <div className="relative col-span-1">
           <div className="relative w-full max-lg:flex max-lg:justify-center lg:left-10">
-            <Image
-              src={oldComputerImage}
-              alt="old computer"
-              width={0}
-              height={0}
+            <motion.div
+              initial={{ opacity: 0, x: -80 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.65 }}
               className="h-[500px] w-[500px] max-lg:h-[350px] max-lg:w-[350px]"
-            />
-            <Image
-              src={crownImage}
-              alt="crown"
-              width={100}
-              height={80}
-              className="absolute left-0 top-0 -rotate-[30deg] max-lg:hidden"
-            />
-            <Image
-              src={plusImage}
-              alt="plus"
-              width={60}
-              height={60}
+            >
+              <Image
+                src={oldComputerImage}
+                alt="old computer"
+                width={0}
+                height={0}
+                className="h-full w-full"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0, rotate: -30 }}
+              transition={{ duration: 0.75 }}
+              className="absolute left-0 top-0 max-lg:hidden"
+              style={{ width: "100px", height: "80px" }}
+            >
+              <Image
+                src={crownImage}
+                alt="crown"
+                width={0}
+                height={0}
+                className="absolute left-0 top-0 h-full w-full"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.9 }}
+              animate={{
+                y: [-8, 10],
+                transition: {
+                  duration: 3.5,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                },
+              }}
               className="absolute left-[26rem] top-52 max-lg:hidden"
-            />
-            <Image
-              src={plusImage}
-              alt="plus 2"
-              width={30}
-              height={40}
+              style={{ width: "60px", height: "60px" }}
+            >
+              <Image
+                src={plusImage}
+                alt="plus"
+                width={0}
+                height={0}
+                className="absolute left-0 top-0 h-full w-full"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.85 }}
+              animate={{
+                y: [-8, 10],
+                transition: {
+                  duration: 3.5,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                },
+              }}
               className="absolute left-[25rem] top-64 max-lg:hidden"
-            />
+              style={{ width: "30px", height: "30px" }}
+            >
+              <Image
+                src={plusImage}
+                alt="plus 2"
+                width={0}
+                height={0}
+                className="absolute left-0 top-0 h-full w-full"
+              />
+            </motion.div>
           </div>
         </div>
         <div className="col-span-1">
-          <div className="rounded-lg bg-cus-gray-100/30 px-6 py-8 backdrop-blur-sm max-md:mx-4">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.75 }}
+            className="rounded-lg bg-cus-gray-100/30 px-6 py-8 backdrop-blur-sm max-md:mx-4"
+          >
             <h2 className="mb-2 font-kufam text-3xl font-semibold text-white">
               Ondigitals
             </h2>
@@ -171,7 +232,7 @@ const WorkExperience = () => {
                 web deploy
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

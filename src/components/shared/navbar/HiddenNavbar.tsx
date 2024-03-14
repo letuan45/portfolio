@@ -21,16 +21,16 @@ const HiddenNavbar = () => {
   const [isOpen, setOpen] = useState(false);
   const [buttonIsShow, setButtonIsShow] = useState(false);
   const [isAllwaysShowButton, setIsAllwaysShowButton] = useState(false);
-  const screenWidth = window.innerWidth;
 
   useEffect(() => {
+    const screenWidth = window.innerWidth;
     if (screenWidth <= 1024) {
       setIsAllwaysShowButton(true);
       setButtonIsShow(true);
     } else {
       setIsAllwaysShowButton(false);
     }
-  }, [screenWidth, pathname]);
+  }, [pathname]);
 
   useMotionValueEvent(scrollYProgress, "change", (latestVal) => {
     if (isAllwaysShowButton) return;

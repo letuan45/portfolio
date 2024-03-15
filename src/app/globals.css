@@ -35,10 +35,6 @@
   align-items: center;
 }
 
-.fade-in {
-  animation: fadeIn 0.3s;
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;

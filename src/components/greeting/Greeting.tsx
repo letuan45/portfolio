@@ -19,7 +19,7 @@ import NestLogo from "../shared/ui/logos/NestLogo";
 import SpringBootLogo from "../shared/ui/logos/SpringBootLogo";
 import SqlLogo from "../shared/ui/logos/SqlLogo";
 import MongoLogo from "../shared/ui/logos/MongoLogo";
-import { useAnimation, useInView, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const TechLogos = [
   {
@@ -348,8 +348,12 @@ const Greeting = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, ease: "easeIn" }}
           >
-            <Link href="/">
-              <GradientStrokeButton>Download my CV</GradientStrokeButton>
+            <Link
+              target="_blank"
+              href="https://drive.google.com/file/d/1dHKjH7L7kSdUB5lUr7dYzfLY6DG6DTTm/view"
+              download={true}
+            >
+              <GradientStrokeButton>Get my CV</GradientStrokeButton>
             </Link>
           </motion.div>
         </div>

@@ -50,11 +50,16 @@ const sliderData = [
       },
       {
         id: 2,
+        element: <p className="text-md font-lato text-white">Shadcn/ui</p>,
+        isShad: true,
+      },
+      {
+        id: 3,
         element: <TailwindLogo />,
         isTailwind: true,
       },
       {
-        id: 3,
+        id: 4,
         element: <MongoLogo />,
       },
     ],
@@ -396,7 +401,7 @@ const Projects = () => {
                   {content.techs.map((tech) => {
                     return (
                       <SwiperSlide
-                        className={`${tech.isNextJS ? "!mr-[40px]" : ""} ${tech.isTailwind ? "!mr-[10px]" : ""}`}
+                        className={`${tech.isNextJS ? "!mr-[40px]" : ""} ${tech.isTailwind ? "!mr-[10px]" : ""} ${tech.isShad ? "!mr-[18px]" : ""}`}
                         key={tech.id}
                       >
                         {tech.element}

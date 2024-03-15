@@ -22,12 +22,7 @@ const WorkExperience = () => {
       <div className="grid grid-cols-2 gap-4 max-lg:grid-cols-1">
         <div className="relative col-span-1">
           <div className="relative w-full max-lg:flex max-lg:justify-center lg:left-10">
-            <motion.div
-              initial={{ opacity: 0, x: -80 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.65 }}
-              className="h-[500px] w-[500px] max-lg:h-[350px] max-lg:w-[350px]"
-            >
+            <div className="h-[500px] w-[500px] max-lg:h-[350px] max-lg:w-[350px]">
               <Image
                 src={oldComputerImage}
                 alt="old computer"
@@ -35,7 +30,7 @@ const WorkExperience = () => {
                 height={0}
                 className="h-full w-full"
               />
-            </motion.div>
+            </div>
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0, rotate: -30 }}
@@ -55,14 +50,6 @@ const WorkExperience = () => {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9 }}
-              animate={{
-                y: [-8, 10],
-                transition: {
-                  duration: 3.5,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                },
-              }}
               className="absolute left-[26rem] top-52 max-lg:hidden"
               style={{ width: "60px", height: "60px" }}
             >
@@ -78,14 +65,6 @@ const WorkExperience = () => {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.85 }}
-              animate={{
-                y: [-8, 10],
-                transition: {
-                  duration: 3.5,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                },
-              }}
               className="absolute left-[25rem] top-64 max-lg:hidden"
               style={{ width: "30px", height: "30px" }}
             >

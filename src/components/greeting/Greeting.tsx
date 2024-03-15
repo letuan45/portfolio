@@ -65,14 +65,6 @@ const Greeting = () => {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          animate={{
-            y: [-10, 10],
-            transition: {
-              duration: 2,
-              repeat: Infinity,
-              repeatType: "reverse",
-            },
-          }}
           className="absolute left-36 top-10 z-10"
           style={{ width: "50px", height: "50px" }}
         >
@@ -88,14 +80,6 @@ const Greeting = () => {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0, rotate: 45 }}
           transition={{ duration: 0.5 }}
-          animate={{
-            y: [-14, 14],
-            transition: {
-              duration: 2,
-              repeat: Infinity,
-              repeatType: "reverse",
-            },
-          }}
           style={{ width: "80px", height: "80px" }}
           className="absolute left-28 top-80 z-10"
         >
@@ -111,14 +95,6 @@ const Greeting = () => {
           initial={{ opacity: 0, x: 70 }}
           whileInView={{ opacity: 1, x: 0, rotate: 12 }}
           transition={{ duration: 0.6 }}
-          animate={{
-            y: [-14, 24],
-            transition: {
-              duration: 3,
-              repeat: Infinity,
-              repeatType: "reverse",
-            },
-          }}
           className="absolute right-48 top-[400px] z-10"
           style={{ width: "60px", height: "60px" }}
         >
@@ -134,14 +110,6 @@ const Greeting = () => {
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0, rotate: 12 }}
           transition={{ duration: 0.5 }}
-          animate={{
-            y: [-8, 8],
-            transition: {
-              duration: 2,
-              repeat: Infinity,
-              repeatType: "reverse",
-            },
-          }}
           className="absolute right-32 top-56 z-10"
           style={{ width: "100px", height: "100px" }}
         >
@@ -258,14 +226,6 @@ const Greeting = () => {
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.68 }}
-            animate={{
-              y: [-8, 10],
-              transition: {
-                duration: 3.5,
-                repeat: Infinity,
-                repeatType: "reverse",
-              },
-            }}
             className="absolute -top-16 right-44 max-xl:hidden"
             style={{ width: "60px", height: "60px" }}
           >
@@ -281,14 +241,6 @@ const Greeting = () => {
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0, rotate: 180 }}
             transition={{ duration: 0.68 }}
-            animate={{
-              y: [-14, 16],
-              transition: {
-                duration: 2,
-                repeat: Infinity,
-                repeatType: "reverse",
-              },
-            }}
             className="absolute -bottom-7 right-44 max-xl:hidden"
             style={{ width: "60px", height: "60px" }}
           >

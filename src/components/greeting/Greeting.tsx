@@ -238,6 +238,7 @@ const Greeting = () => {
             initial={{ opacity: 0, x: 110 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, ease: "easeIn" }}
+            className="flex flex-col items-center justify-center"
           >
             <h2
               className="font-kufam text-6xl font-semibold text-white max-lg:text-center max-sm:text-5xl"
@@ -259,7 +260,7 @@ const Greeting = () => {
               like my introduction or get interesting with my profile, please
               contact me. Wish you have a wonderful day.
             </p>
-            <ul className="max:md-justify-center mb-6 mt-3 flex flex-wrap items-center gap-4 max-md:px-4">
+            <ul className="mb-6 mt-3 flex flex-wrap items-center gap-4 max-lg:justify-center max-md:px-4">
               {TechLogos.map((tech) => (
                 <li key={tech.id}>{tech.element}</li>
               ))}

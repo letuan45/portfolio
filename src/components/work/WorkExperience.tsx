@@ -31,10 +31,7 @@ const WorkExperience = () => {
                 className="h-full w-full"
               />
             </div>
-            <motion.div
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0, rotate: -30 }}
-              transition={{ duration: 0.75 }}
+            <div
               className="absolute left-0 top-0 max-lg:hidden"
               style={{ width: "100px", height: "80px" }}
             >
@@ -45,11 +42,8 @@ const WorkExperience = () => {
                 height={0}
                 className="absolute left-0 top-0 h-full w-full"
               />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.9 }}
+            </div>
+            <div
               className="absolute left-[26rem] top-52 max-lg:hidden"
               style={{ width: "60px", height: "60px" }}
             >
@@ -60,11 +54,8 @@ const WorkExperience = () => {
                 height={0}
                 className="absolute left-0 top-0 h-full w-full"
               />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.85 }}
+            </div>
+            <div
               className="absolute left-[25rem] top-64 max-lg:hidden"
               style={{ width: "30px", height: "30px" }}
             >
@@ -75,7 +66,7 @@ const WorkExperience = () => {
                 height={0}
                 className="absolute left-0 top-0 h-full w-full"
               />
-            </motion.div>
+            </div>
           </div>
         </div>
         <div className="col-span-1">

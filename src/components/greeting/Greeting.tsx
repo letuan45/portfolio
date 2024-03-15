@@ -61,10 +61,7 @@ const Greeting = () => {
       className="container mx-auto mt-3 grid w-full grid-cols-1 gap-4 py-8 lg:h-[90vh] lg:grid-cols-2"
     >
       <div className="relative col-span-1">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+        <div
           className="absolute left-36 top-10 z-10"
           style={{ width: "50px", height: "50px" }}
         >
@@ -75,11 +72,8 @@ const Greeting = () => {
             height={0}
             className="absolute left-0 top-0 h-full w-full"
           />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0, rotate: 45 }}
-          transition={{ duration: 0.5 }}
+        </div>
+        <div
           style={{ width: "80px", height: "80px" }}
           className="absolute left-28 top-80 z-10"
         >
@@ -90,11 +84,8 @@ const Greeting = () => {
             height={0}
             className="absolute left-0 top-0 h-full w-full"
           />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: 70 }}
-          whileInView={{ opacity: 1, x: 0, rotate: 12 }}
-          transition={{ duration: 0.6 }}
+        </div>
+        <div
           className="absolute right-48 top-[400px] z-10"
           style={{ width: "60px", height: "60px" }}
         >
@@ -105,11 +96,8 @@ const Greeting = () => {
             height={0}
             className="absolute left-0 top-0 h-full w-full"
           />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0, rotate: 12 }}
-          transition={{ duration: 0.5 }}
+        </div>
+        <div
           className="absolute right-32 top-56 z-10"
           style={{ width: "100px", height: "100px" }}
         >
@@ -120,7 +108,7 @@ const Greeting = () => {
             height={0}
             className="absolute left-0 top-0 h-full w-full"
           />
-        </motion.div>
+        </div>
         <div className="relative my-20 flex justify-center">
           <div className="relative h-[300px] w-[300px] ">
             <div
@@ -222,10 +210,7 @@ const Greeting = () => {
       </div>
       <div className="col-span-1">
         <div className="relative flex flex-col justify-center max-lg:items-center md:mt-10">
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.68 }}
+          <div
             className="absolute -top-16 right-44 max-xl:hidden"
             style={{ width: "60px", height: "60px" }}
           >
@@ -236,11 +221,8 @@ const Greeting = () => {
               height={0}
               className="absolute left-0 top-0 h-full w-full"
             />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0, rotate: 180 }}
-            transition={{ duration: 0.68 }}
+          </div>
+          <div
             className="absolute -bottom-7 right-44 max-xl:hidden"
             style={{ width: "60px", height: "60px" }}
           >
@@ -251,50 +233,38 @@ const Greeting = () => {
               height={60}
               className="absolute left-0 top-0 h-full w-full"
             />
-          </motion.div>
-          <motion.h2
+          </div>
+          <motion.div
             initial={{ opacity: 0, x: 110 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, ease: "easeIn" }}
-            className="font-kufam text-6xl font-semibold text-white max-lg:text-center max-sm:text-5xl"
-            style={{ textShadow: "0 0 0.15em white" }}
           >
-            Hi there!
-          </motion.h2>
-          <motion.h1
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, ease: "easeIn" }}
-            className="my-5 font-kufam text-4xl text-white max-lg:text-center max-sm:text-2xl"
-          >
-            My name is{" "}
-            <span
-              className="font-semibold text-cus-purple-100 max-lg:text-center "
-              style={{ textShadow: "0 0 0.08em #BC6FF1" }}
+            <h2
+              className="font-kufam text-6xl font-semibold text-white max-lg:text-center max-sm:text-5xl"
+              style={{ textShadow: "0 0 0.15em white" }}
             >
-              Le Lam Tuan
-            </span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, x: 120 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.55, ease: "easeIn" }}
-            className="mt-2 w-4/5 font-kufam text-lg text-white max-lg:text-center max-sm:text-sm"
-          >
-            Welcome to my Portfolio, this is a Portfolio code by NextJS if you
-            like my introduction or get interesting with my profile, please
-            contact me. Wish you have a wonderful day.
-          </motion.p>
-          <motion.ul
-            initial={{ opacity: 0, x: 80 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.67, ease: "easeIn" }}
-            className="max:md-justify-center mb-6 mt-3 flex flex-wrap items-center gap-4 max-md:px-4"
-          >
-            {TechLogos.map((tech) => (
-              <li key={tech.id}>{tech.element}</li>
-            ))}
-          </motion.ul>
+              Hi there!
+            </h2>
+            <h1 className="my-5 font-kufam text-4xl text-white max-lg:text-center max-sm:text-2xl">
+              My name is{" "}
+              <span
+                className="font-semibold text-cus-purple-100 max-lg:text-center "
+                style={{ textShadow: "0 0 0.08em #BC6FF1" }}
+              >
+                Le Lam Tuan
+              </span>
+            </h1>
+            <p className="mt-2 w-4/5 font-kufam text-lg text-white max-lg:text-center max-sm:text-sm">
+              Welcome to my Portfolio, this is a Portfolio code by NextJS if you
+              like my introduction or get interesting with my profile, please
+              contact me. Wish you have a wonderful day.
+            </p>
+            <ul className="max:md-justify-center mb-6 mt-3 flex flex-wrap items-center gap-4 max-md:px-4">
+              {TechLogos.map((tech) => (
+                <li key={tech.id}>{tech.element}</li>
+              ))}
+            </ul>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 120 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -238,7 +238,7 @@ const Greeting = () => {
             initial={{ opacity: 0, x: 110 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, ease: "easeIn" }}
-            className="flex flex-col items-center justify-center"
+            className="flex flex-col justify-center max-lg:items-center"
           >
             <h2
               className="font-kufam text-6xl font-semibold text-white max-lg:text-center max-sm:text-5xl"

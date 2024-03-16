@@ -32,6 +32,12 @@ const HiddenNavbar = () => {
     }
   }, [pathname]);
 
+  useEffect(() => {
+    if (!buttonIsShow && isOpen) {
+      setOpen(false);
+    }
+  }, [buttonIsShow]);
+
   useMotionValueEvent(scrollYProgress, "change", (latestVal) => {
     if (isAllwaysShowButton) return;
     if (latestVal > 0.04) {
